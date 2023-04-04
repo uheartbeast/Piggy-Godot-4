@@ -25,3 +25,15 @@ position = Vector2(243, 81)
 
 [node name="Apple6" parent="." instance=ExtResource("2_iqmjl")]
 position = Vector2(267, 134)
+
+[node name="Apple7" parent="." instance=ExtResource("2_iqmjl")]
+position = Vector2(52, 141)
+
+[node name="Apple8" parent="." instance=ExtResource("2_iqmjl")]
+position = Vector2(93, 164)
+
+[node name="Apple9" parent="." instance=ExtResource("2_iqmjl")]
+position = Vector2(176, 144)
+
+[node name="Apple10" parent="." instance=ExtResource("2_iqmjl")]
+position = Vector2(85, 85)

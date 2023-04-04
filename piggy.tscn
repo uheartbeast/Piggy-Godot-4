@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cufebj14t7eor"]
+[gd_scene load_steps=8 format=3 uid="uid://cufebj14t7eor"]
 
 [ext_resource type="Texture2D" uid="uid://c4kd1m6p6n4dj" path="res://pig.png" id="1_3u75m"]
 [ext_resource type="Script" path="res://piggy.gd" id="1_tp0v1"]
@@ -57,7 +57,12 @@ _data = {
 "run": SubResource("Animation_nbmff")
 }
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_68i0g"]
+radius = 7.0
+height = 22.0
+
 [node name="Piggy" type="Area2D"]
+collision_mask = 2
 script = ExtResource("1_tp0v1")
 speed = 65
 
@@ -69,3 +74,10 @@ hframes = 3
 libraries = {
 "": SubResource("AnimationLibrary_35xnc")
 }
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_68i0g")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
